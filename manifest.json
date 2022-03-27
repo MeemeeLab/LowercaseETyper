@@ -1,0 +1,23 @@
+{
+    "name": "LowercaseETyper",
+    "description": "Make keyboard lowercase for http://e-typing.ne.jp",
+    "version": "0.1.0",
+    "manifest_version": 3,
+
+    "permissions": [
+        "storage"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.e-typing.ne.jp/*"
+            ],
+            "js": [
+                "js/etype_main.js"
+            ]
+        }
+    ]
+}
