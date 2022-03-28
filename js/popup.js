@@ -12,7 +12,7 @@ const sendMessageEventHandler = function (_) {
         if (lastError.message === 'Could not establish connection. Receiving end does not exist.') {
             console.log('Failed to send message; Looks like e-type is not open or running.');
         } else {
-            console.error(lastError);
+            console.error(lastError.message);
         }
     }
 };
